@@ -1,0 +1,32 @@
+<header>
+	<nav class="bg-gray-900 shadow-md">
+		<div class="container mx-auto flex items-center justify-between p-4">
+			<a href="/" class="flex items-center" aria-label="Accueil du Blog de Football">
+				<img src="{{ asset('assets/image/gigabouletlogo.webp') }}" alt="Logo du Blog de Football" class="h-12 w-auto" loading="lazy">
+			</a>
+			<button class="text-white md:hidden focus:outline-none" id="navbar-toggler" aria-label="Toggle menu">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+				</svg>
+			</button>
+			<div class="hidden md:flex space-x-6" id="navbarNav">
+				<a href="/" class="text-gray-300 hover:text-white transition" aria-label="Page d'accueil">Accueil</a>
+				<a href="/analyse" class="text-gray-300 hover:text-white transition" aria-label="Page d'analyses">Analyses</a>
+				<a href="{{ path('app_reportage') }}" class="text-gray-300 hover:text-white transition" aria-label="Page des reportages">Reportages</a>
+				<a href="{{ path('app_match') }}" class="text-gray-300 hover:text-white transition" aria-label="Page des matchs">Les Matchs</a>
+				{% if is_granted('ROLE_ADMIN') %}
+					<a href="" class="text-gray-300 hover:text-white transition" aria-label="Accéder au back office">Back office</a>
+				{% endif %}
+			</div>
+		</div>
+		<div class="md:hidden bg-gray-800" id="mobileNav" style="display: none;">
+			<a href="/" class="block py-2 px-4 text-gray-300 hover:bg-gray-700 hover:text-white transition" aria-label="Page d'accueil">Accueil</a>
+			<a href="/analyse" class="block py-2 px-4 text-gray-300 hover:bg-gray-700 hover:text-white transition" aria-label="Page d'analyses">Analyses</a>
+			<a href="{{ path('app_reportage') }}" class="block py-2 px-4 text-gray-300 hover:bg-gray-700 hover:text-white transition" aria-label="Page des reportages">Reportages</a>
+			<a href="{{ path('app_match') }}" class="block py-2 px-4 text-gray-300 hover:bg-gray-700 hover:text-white transition" aria-label="Page des matchs">Les Matchs</a>
+			{% if is_granted('ROLE_ADMIN') %}
+				<a href="" class="block py-2 px-4 text-gray-300 hover:bg-gray-700 hover:text-white transition" aria-label="Accéder au back office">Back office</a>
+			{% endif %}
+		</div>
+	</nav>
+</header>

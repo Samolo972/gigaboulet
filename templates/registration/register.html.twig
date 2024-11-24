@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register
+{% endblock %}
+
+{% block body %}
+	<div
+		class="container mx-auto mt-10 px-4 max-w-lg">
+		<!-- Affichage des erreurs globales -->
+		<div class="mb-6 text-red-500">
+			{{ form_errors(registrationForm) }}
+		</div>
+
+		{{ form_start(registrationForm, { 'attr': {'class': 'space-y-8'} }) }}
+
+		<!-- Prénom -->
+		<div>
+			{{ form_row(registrationForm.prenom, {
+            'attr': {
+                'class': 'block w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all',
+                'aria-describedby': 'prenomHelp'
+            },
+            'label': 'Prénom',
+            'label_attr': {'class': 'text-lg text-gray-800 font-medium mb-2'},
+        }) }}
+			<div id="prenomHelp" class="text-sm text-gray-500">Entrez votre prénom.</div>
+		</div>
+
+		<!-- Nom -->
+		<div>
+			{{ form_row(registrationForm.nom, {
+            'attr': {
+                'class': 'block w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all',
+                'aria-describedby': 'nomHelp'
+            },
+            'label': 'Nom',
+            'label_attr': {'class': 'text-lg text-gray-800 font-medium mb-2'},
+        }) }}
+			<div id="nomHelp" class="text-sm text-gray-500">Entrez votre nom de famille.</div>
+		</div>
+
+		<!-- E-mail -->
+		<div>
+			{{ form_row(registrationForm.email, {
+            'attr': {
+                'class': 'block w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all',
+                'aria-describedby': 'emailHelp'
+            },
+            'label': 'E-mail',
+            'label_attr': {'class': 'text-lg text-gray-800 font-medium mb-2'},
+        }) }}
+			<div id="emailHelp" class="text-sm text-gray-500">Entrez une adresse e-mail valide pour la confirmation.</div>
+		</div>
+
+		<!-- Mot de passe -->
+		<div>
+			{{ form_row(registrationForm.plainPassword, {
+            'label': 'Mot de passe',
+            'attr': {
+                'class': 'block w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all',
+                'aria-describedby': 'passwordHelp'
+            },
+            'label_attr': {'class': 'text-lg text-gray-800 font-medium mb-2'},
+        }) }}
+			<div id="passwordHelp" class="text-sm text-gray-500">Le mot de passe doit comporter au moins 8 caractères, incluant des chiffres et des lettres.</div>
+		</div>
+
+		<!-- Bouton d'inscription -->
+		<div class="text-center mt-8">
+			<button type="submit" class="w-full py-3 text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-300 transition-all">
+				S'inscrire
+			</button>
+		</div>
+
+		{{ form_end(registrationForm) }}
+	</div>
+{% endblock %}

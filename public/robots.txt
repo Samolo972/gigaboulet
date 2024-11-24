@@ -1,0 +1,4 @@
+Sitemap: https://gigaboulet.com/sitemap.xml
+User-agent: *
+Disallow: /admin
+

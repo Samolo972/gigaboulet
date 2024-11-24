@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Interviews Exclusives avec des Joueurs et Entraîneurs de Football
+{% endblock %}
+
+{% block meta_description %}
+	<meta name="description" content="Découvrez des interviews exclusives avec les stars du football et les entraîneurs comme Mbappé, Luis Enrique et Deschamps. Analyse de leurs performances et vision du sport.">
+{% endblock %}
+
+{% block body %}
+	<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+		<div class="flex justify-between items-center mb-6">
+			<h1 class="text-3xl font-bold text-gray-900">Interviews Exclusives avec les Joueurs et Entraîneurs de Football</h1>
+		</div>
+
+		<div
+			class="space-y-6">
+			<!-- Interview 1 -->
+			<article class="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
+				<div class="flex justify-between items-start">
+					<div class="flex-1">
+						<div class="flex items-center space-x-3 mb-3">
+							<span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Exclusif</span>
+							<span class="text-gray-500 text-sm">Il y a 2 heures</span>
+						</div>
+						<h2 class="text-xl font-bold text-gray-900 mb-2">Mbappé : "Le plus important, c'est d'être décisif"</h2>
+						<p class="text-gray-600 mb-4">L'attaquant parisien s'est confié après la victoire contre Manchester City</p>
+						<blockquote class="border-l-4 border-blue-600 pl-4 py-2 mb-4">
+							<p class="text-gray-800 italic">"On savait que ce serait un match difficile, mais on a montré du caractère. C'est ce genre de matchs qui nous fait grandir en tant qu'équipe."</p>
+						</blockquote>
+						<div class="flex items-center text-sm text-gray-500">
+							<span class="font-medium text-gray-700 mr-2">Par David Martin</span>
+							<span>•</span>
+							<span class="ml-2">Interview complète (8 min)</span>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<!-- Interview 2 -->
+			<article class="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
+				<div class="flex justify-between items-start">
+					<div class="flex-1">
+						<div class="flex items-center space-x-3 mb-3">
+							<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Ligue 1</span>
+							<span class="text-gray-500 text-sm">20 Nov 2024</span>
+						</div>
+						<h2 class="text-xl font-bold text-gray-900 mb-2">Luis Enrique : "Je suis satisfait de la progression"</h2>
+						<p class="text-gray-600 mb-4">L'entraîneur du PSG évoque les objectifs de la saison</p>
+						<blockquote class="border-l-4 border-blue-600 pl-4 py-2 mb-4">
+							<p class="text-gray-800 italic">"L'équipe progresse chaque semaine. Les automatismes se créent et c'est exactement ce que nous recherchons à ce stade de la saison."</p>
+						</blockquote>
+						<div class="flex items-center text-sm text-gray-500">
+							<span class="font-medium text-gray-700 mr-2">Par Sophie Dubois</span>
+							<span>•</span>
+							<span class="ml-2">Interview complète (5 min)</span>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<!-- Interview 3 -->
+			<article class="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
+				<div class="flex justify-between items-start">
+					<div class="flex-1">
+						<div class="flex items-center space-x-3 mb-3">
+							<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Les Bleus</span>
+							<span class="text-gray-500 text-sm">20 Nov 2024</span>
+						</div>
+						<h2 class="text-xl font-bold text-gray-900 mb-2">Deschamps : "Un groupe qui vit bien"</h2>
+						<p class="text-gray-600 mb-4">Le sélectionneur fait le point avant le prochain rassemblement</p>
+						<blockquote class="border-l-4 border-blue-600 pl-4 py-2 mb-4">
+							<p class="text-gray-800 italic">"La concurrence est saine, tout le monde tire dans le même sens. C'est important d'avoir cette ambiance pour performer au plus haut niveau."</p>
+						</blockquote>
+						<div class="flex items-center text-sm text-gray-500">
+							<span class="font-medium text-gray-700 mr-2">Par Marc Leblanc</span>
+							<span>•</span>
+							<span class="ml-2">Interview complète (6 min)</span>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+	</section>
+{% endblock %}

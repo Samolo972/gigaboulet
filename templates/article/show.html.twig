@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ article.titre }}
+	- Blog de Football
+{% endblock %}
+
+{% block body %}
+	<!-- Section principale de l'article -->
+	<section class="py-10 bg-gray-50">
+		<div
+			class="container mx-auto">
+			<!-- Carte principale -->
+			<div
+				class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+				<!-- Image avec effet de zoom et overlay -->
+				<div class="relative group">
+					<img src="{{ vich_uploader_asset(article, 'imageFile') }}" alt="{{ article.imageName }}" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+					<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-0 group-hover:opacity-50 transition duration-500"></div>
+					<h1 class="absolute bottom-4 left-6 text-white text-3xl font-bold transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+						{{ article.titre }}
+					</h1>
+				</div>
+
+				<!-- Contenu -->
+				<div
+					class="p-6 md:p-8">
+					<!-- Informations sur l'article -->
+					<div class="flex items-center text-sm text-gray-500 mb-4">
+						<span class="mr-4">
+							Publié le :
+							{{ article.dateDePublication|date('d M Y') }}
+						</span>
+						<span>Par :
+							<strong>{{ article.auteur }}</strong>
+						</span>
+					</div>
+
+					<p class="text-lg text-gray-800 leading-relaxed mb-6">
+						{{ article.contenu | nl2br }}
+					</p>
+
+					<!-- Bouton retour -->
+					<a href="{{ path('home.page') }}" class="inline-block bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-md shadow-md hover:shadow-lg transition duration-300">
+						← Retour à l'accueil
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section "Articles recommandés" -->
+	<section class="mt-16 py-10 bg-white">
+		<div class="container mx-auto">
+			<h2 class="text-2xl font-semibold text-gray-800 mb-8">Articles recommandés</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				{% for suggestions in suggestion %}
+					<div
+						class="bg-gray-100 rounded-lg shadow-md hover:shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+						<!-- Image -->
+						<img
+						src="{{ vich_uploader_asset(suggestions, 'imageFile') }}" alt="{{ suggestions.imageName }}" class="w-full h-48 object-cover" loading="lazy">
+
+						<!-- Contenu -->
+						<div class="p-4">
+							<h3 class="text-lg font-semibold mb-2 text-gray-800">{{ suggestions.titre }}</h3>
+							<p class="text-gray-600 text-sm mb-4">{{ suggestions.contenu | slice(0, 80) ~ '...' }}</p>
+							<a href="{{ path('article_show', { slug: suggestions.slug }) }}" class="text-blue-600 hover:underline">
+								Lire la suite →
+							</a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endblock %}

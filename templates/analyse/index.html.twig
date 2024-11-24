@@ -1,0 +1,175 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Analyse Tactiques des Matchs de Football
+{% endblock %}
+
+{% block meta_description %}
+	<meta name="description" content="Découvrez les analyses tactiques détaillées des matchs de football, y compris les performances de top clubs comme PSG, Marseille, et Arsenal. Tactiques, statistiques et points clés des matchs de Ligue des Champions, Ligue 1 et Premier League.">
+{% endblock %}
+
+{% block body %}
+	<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+		<div class="flex justify-between items-center mb-6">
+			<h1 class="text-2xl font-bold text-gray-900">Analyses Tactiques du Football</h1>
+		</div>
+
+		<div
+			class="space-y-6">
+			<!-- Analyse 1 -->
+			<article class="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
+				<div class="flex justify-between items-start">
+					<div class="flex-1">
+						<div class="flex items-center space-x-3 mb-3">
+							<span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Ligue des Champions</span>
+							<span class="text-gray-500 text-sm">Il y a 2 heures</span>
+						</div>
+						<div class="flex items-center justify-between mb-4">
+							<h2 class="text-xl font-bold text-gray-900">PSG 2 - 1 Manchester City</h2>
+							<span class="text-sm text-gray-500">20 Nov 2024</span>
+						</div>
+						<div class="space-y-4">
+							<div>
+								<h3 class="font-semibold text-gray-900 mb-2">Points clés du match</h3>
+								<ul class="list-disc list-inside text-gray-600 space-y-1 ml-2">
+									<li>Domination du milieu de terrain parisien (63% possession)</li>
+									<li>Pressing haut efficace de Manchester City</li>
+									<li>Vitali Vitali décisif sur les transitions</li>
+								</ul>
+							</div>
+							<div>
+								<h3 class="font-semibold text-gray-900 mb-2">Changement tactique décisif</h3>
+								<p class="text-gray-600">Le passage en 4-4-2 à la 65e minute a permis au PSG de reprendre le contrôle du match, libérant les couloirs pour les montées de Hernandez.</p>
+							</div>
+							<div>
+								<h3 class="font-semibold text-gray-900 mb-2">Stats clés</h3>
+								<div class="grid grid-cols-3 gap-4 text-sm">
+									<div class="bg-gray-50 p-2 rounded">
+										<p class="text-gray-600">Tirs</p>
+										<p class="font-bold">15 - 12</p>
+									</div>
+									<div class="bg-gray-50 p-2 rounded">
+										<p class="text-gray-600">Possession</p>
+										<p class="font-bold">63% - 37%</p>
+									</div>
+									<div class="bg-gray-50 p-2 rounded">
+										<p class="text-gray-600">xG</p>
+										<p class="font-bold">2.3 - 1.1</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mt-4 flex items-center text-sm text-gray-500">
+							<span class="font-medium text-gray-700 mr-2">Par Thomas Bernard</span>
+							<span>•</span>
+							<span class="ml-2">Analyse complète (12 min)</span>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<!-- Analyse 2 -->
+			<article class="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
+				<div class="flex justify-between items-start">
+					<div class="flex-1">
+						<div class="flex items-center space-x-3 mb-3">
+							<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Ligue 1</span>
+							<span class="text-gray-500 text-sm">20 Nov 2024</span>
+						</div>
+						<div class="flex items-center justify-between mb-4">
+							<h2 class="text-xl font-bold text-gray-900">Marseille 3 - 2 Lyon</h2>
+							<span class="text-sm text-gray-500">19 Nov 2024</span>
+						</div>
+						<div class="space-y-4">
+							<div>
+								<h3 class="font-semibold text-gray-900 mb-2">L'impact du pressing</h3>
+								<p class="text-gray-600">L'OM a dominé grâce à un pressing intense dès la récupération, empêchant Lyon de construire proprement depuis l'arrière.</p>
+							</div>
+							<div>
+								<h3 class="font-semibold text-gray-900 mb-2">Duels clés</h3>
+								<ul class="list-disc list-inside text-gray-600 space-y-1 ml-2">
+									<li>Aubameyang vs Caleta-Car : 7 duels gagnés sur 9</li>
+									<li>Domination du milieu marseillais</li>
+									<li>Supériorité dans les duels aériens (65%)</li>
+								</ul>
+							</div>
+							<div>
+								<h3 class="font-semibold text-gray-900 mb-2">Stats clés</h3>
+								<div class="grid grid-cols-3 gap-4 text-sm">
+									<div class="bg-gray-50 p-2 rounded">
+										<p class="text-gray-600">Tirs cadrés</p>
+										<p class="font-bold">8 - 4</p>
+									</div>
+									<div class="bg-gray-50 p-2 rounded">
+										<p class="text-gray-600">Possession</p>
+										<p class="font-bold">58% - 42%</p>
+									</div>
+									<div class="bg-gray-50 p-2 rounded">
+										<p class="text-gray-600">Corners</p>
+										<p class="font-bold">7 - 3</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mt-4 flex items-center text-sm text-gray-500">
+							<span class="font-medium text-gray-700 mr-2">Par Marie Lecomte</span>
+							<span>•</span>
+							<span class="ml-2">Analyse complète (10 min)</span>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<!-- Analyse 3 -->
+			<article class="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
+				<div class="flex justify-between items-start">
+					<div class="flex-1">
+						<div class="flex items-center space-x-3 mb-3">
+							<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Premier League</span>
+							<span class="text-gray-500 text-sm">19 Nov 2024</span>
+						</div>
+						<div class="flex items-center justify-between mb-4">
+							<h2 class="text-xl font-bold text-gray-900">Arsenal 1 - 0 Liverpool</h2>
+							<span class="text-sm text-gray-500">18 Nov 2024</span>
+						</div>
+						<div class="space-y-4">
+							<div>
+								<h3 class="font-semibold text-gray-900 mb-2">La stratégie d'Arteta</h3>
+								<p class="text-gray-600">Le bloc médian compact d'Arsenal a parfaitement neutralisé le pressing de Liverpool, permettant des transitions rapides vers l'avant.</p>
+							</div>
+							<div>
+								<h3 class="font-semibold text-gray-900 mb-2">Moments clés</h3>
+								<ul class="list-disc list-inside text-gray-600 space-y-1 ml-2">
+									<li>But de Saka après une transition rapide (23')</li>
+									<li>Double occasion de Liverpool (67')</li>
+									<li>Arrêt décisif de Raya (89')</li>
+								</ul>
+							</div>
+							<div>
+								<h3 class="font-semibold text-gray-900 mb-2">Stats clés</h3>
+								<div class="grid grid-cols-3 gap-4 text-sm">
+									<div class="bg-gray-50 p-2 rounded">
+										<p class="text-gray-600">Tirs</p>
+										<p class="font-bold">11 - 14</p>
+									</div>
+									<div class="bg-gray-50 p-2 rounded">
+										<p class="text-gray-600">Possession</p>
+										<p class="font-bold">45% - 55%</p>
+									</div>
+									<div class="bg-gray-50 p-2 rounded">
+										<p class="text-gray-600">xG</p>
+										<p class="font-bold">1.2 - 0.9</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mt-4 flex items-center text-sm text-gray-500">
+							<span class="font-medium text-gray-700 mr-2">Par Pierre Dupont</span>
+							<span>•</span>
+							<span class="ml-2">Analyse complète (8 min)</span>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+	</section>
+{% endblock %}

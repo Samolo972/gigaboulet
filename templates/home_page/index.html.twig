@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue sur le Blog de Football - GigaBoulet
+{% endblock %}
+
+{% block body %}
+	<!-- Section d'introduction -->
+	<section class="py-10">
+		<div class="container mx-auto">
+			<div class="flex flex-wrap">
+				<div
+					class="w-full md:w-2/3 mb-6 md:mb-0">
+					<!-- H1 pour la principale phrase d'accroche SEO -->
+					<h1 class="text-4xl font-bold mb-4 animate__animated animate__fadeIn">
+						Bienvenue sur le Blog de Football -
+						<span class="text-blue-600">GigaBoulet</span>
+					</h1>
+
+					<!-- Paragraphe optimisé pour le SEO -->
+					<p class="text-lg mb-6 text-gray-700 animate__animated animate__fadeIn animate__delay-1s">
+						<span class="highlight">GigaBoulet</span>
+						est votre source incontournable pour l'actualité footballistique,
+												                        des
+						<span class="highlight">analyses détaillées</span>
+						des matchs, et les dernières nouvelles des
+						<span class="highlight">championnats de football</span>
+						tels que la
+						<span class="highlight">Ligue 1</span>, la
+						<span class="highlight">Ligue des Champions</span>
+						et la
+						<span class="highlight">Premier League</span>. Découvrez également les
+						<span class="highlight">performances des équipes</span>
+						et des
+						<span class="highlight">analyses tactiques</span>
+						approfondies.
+					</p>
+					<p class="text-lg mb-6 text-gray-700 animate__animated animate__fadeIn animate__delay-2s">
+						Suivez les
+						<span class="highlight">résultats des matchs</span>, les
+						<span class="highlight">transferts</span>,
+														                        et bénéficiez d'<span class="highlight">interviews exclusives</span>
+						avec des grandes figures du football mondial.
+												                        Que vous soyez un passionné ou un expert,
+						<span class="highlight">GigaBoulet</span>
+						vous propose un contenu enrichissant
+												                        couvrant les actualités essentielles du ballon rond.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section des actualités -->
+	<section class="bg-gray-100 py-10">
+		<div
+			class="container mx-auto">
+			<!-- H2 pour structurer le contenu des actualités -->
+			<h2 class="text-3xl font-semibold mb-8">Les dernières actualités du football</h2>
+			<div
+				class="flex flex-wrap -mx-4">
+				<!-- Boucle pour afficher les articles -->
+				{% for article in pagination.items %}
+					<div class="w-full md:w-1/3 px-4 mb-8">
+						<div class="bg-white rounded-lg shadow-md overflow-hidden">
+							<img src="{{ vich_uploader_asset(article, 'imageFile') }}" alt="{{ article.imageName }}" class="w-full h-48 object-cover" loading="lazy">
+							<div
+								class="p-6">
+								<!-- Titre de l'article dans H3 -->
+								<h3 class="text-xl font-semibold mb-2">{{ article.titre }}</h3>
+								<p class="text-gray-600 mb-4">{{ article.contenu | slice(0, 100) ~ '...' }}</p>
+								<a href="{{ path('article_show', { slug: article.slug }) }}" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">Lire la suite</a>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+
+			<!-- Pagination Navigation centrée -->
+			<div class="mt-6 flex justify-center">
+				{{ knp_pagination_render(pagination) }}
+			</div>
+		</div>
+	</section>
+{% endblock %}
