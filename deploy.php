@@ -14,8 +14,8 @@ add('writable_dirs', []);
 
 // Hosts
 
-host('185.22.110.4')
-    ->set('remote_user', 'jsxrkwqf')
+host('')
+    ->set('remote_user', '')
     ->set('deploy_path', '~/gigaboulet');
 
 // Hooks
