@@ -1,0 +1,8 @@
+# Indique aux robots des moteurs de recherche ce qu'ils peuvent explorer ou non
+
+# Autoriser tous les robots à accéder à toutes les pages
+User-agent: *
+Disallow:
+
+# Ajouter le lien vers le sitemap
+Sitemap: https://www.gigaboulet.org/sitemap.xml
